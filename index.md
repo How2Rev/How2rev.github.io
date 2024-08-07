@@ -28,6 +28,8 @@ Each flag will be saved as LRCTF{} (or contrary mention)
 You can check if you get the right flag with a md5sum provided with each challenge :   
 `echo -n "LRCTF{theFlag}" | md5sum`
 
+You can find all the sources and challenges ressources on the github, but i would recommend to do the challenge before looking sources if you don't want to be spoiled.
+
 # C01 - EntryPoint to reverse path
 
 In this module, you will learn the very basic of reverse : 
