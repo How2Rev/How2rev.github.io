@@ -45,4 +45,4 @@ md5sum : 2e3d9f4dc5d118cb8abaab1d8b22ea4e
 
 Now that your familiar with basic C reversing, let's see if you can understand more advanced C concept !
 
-Next : [C01 : Reversing C and essential concepts](/pages/C01/c.md).
+Next : [C01 : Reversing C and essential concepts](/pages/C01/c.html).
