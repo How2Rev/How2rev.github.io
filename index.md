@@ -35,26 +35,26 @@ You can find all the sources and challenges ressources on the github, but i woul
 In this module, you will learn the very basic of reverse : 
 
 - decompilation  
-[C01 : decompilation & basic reversing](./pages/C01/introduction.md).
+[C01 : decompilation & basic reversing](/pages/C01/introduction.md).
 - The C language  
-[C01 : Reversing C and essential concepts](./pages/C01/c.md).
+[C01 : Reversing C and essential concepts](/pages/C01/c.md).
 
 - understanding elf/mach0/PE format  
-[C01 : the Elf format](./pages/C01/elf.md).  
-[C01 : the mach0 format](./pages/C01/mach0.md).  
-[C01 : the PE format](./pages/C01/pe.md).  
+[C01 : the Elf format](/pages/C01/elf.md).  
+[C01 : the mach0 format](/pages/C01/mach0.md).  
+[C01 : the PE format](/pages/C01/pe.md).  
 
 # C02 - Begginer Path
 
 In this module, we will start with basic reversing challenge that setup our journey
 
 - basic cryptography essentials :   
-[C02 : Learning how to recognize and understand cryptography in reverse](./pages/C02/crypto-intro.md).
+[C02 : Learning how to recognize and understand cryptography in reverse](/pages/C02/crypto-intro.md).
 
 
 - languages specific decompilation and associated problems (rust, c++, ...)  
-[C02 : Understanding Rust reversing](./pages/C02/rust.md).  
-[C02 : Understanding C++ reversing](./pages/C02/c++.md).
+[C02 : Understanding Rust reversing](/pages/C02/rust.md).  
+[C02 : Understanding C++ reversing](/pages/C02/c++.md).
 
 
 # C03 - Mobile Reversing
@@ -62,23 +62,23 @@ In this module, we will start with basic reversing challenge that setup our jour
 In this module, you will understand concepts linked to the mobile world.
 
 - The Android path  
-[C03 : Understanding APK reversing](./pages/C03/apk.md).
+[C03 : Understanding APK reversing](/pages/C03/apk.md).
 
 - The IOS Path  
-[C03 : Understanding IOS reversing](./pages/C03/ios.md).
+[C03 : Understanding IOS reversing](/pages/C03/ios.md).
 
 # C04 - Obfuscation world
 
 In this module, you will face obfuscation challenge. This isn't a reference for real world problems but an introduction to methodology and efficiency to deal with problems like this.
 
 - Virtual Machine obfuscation
-[C04 : How to reverse a VM](./pages/C04/vm.md).
+[C04 : How to reverse a VM](/pages/C04/vm.md).
 
 - MBA based obfuscation
-[C04 : MBA reversing](./pages/C04/mba.md).
+[C04 : MBA reversing](/pages/C04/mba.md).
 
 - Control flow flattening obfuscation
-[C04 : CFF reversing](./pages/C04/cff.md).
+[C04 : CFF reversing](/pages/C04/cff.md).
 
 
 # C05 - Low level Reversing
@@ -86,13 +86,13 @@ In this module, you will face obfuscation challenge. This isn't a reference for 
 In this module, we deep dive into low level reversing, with binaries that are difficult to emulate, to debug. Here we will work with bootloader, firmware, shellcode...
 
 - Custom loader reversing   
-[C05 : Custom loader and how to approach the problem](./pages/C05/custom-loader.md).
+[C05 : Custom loader and how to approach the problem](/pages/C05/custom-loader.md).
 
 - Bootloader (UEFI/Custom code entrypoint/...)  
-[C05 : Reversing bootloader](./pages/C05/bootloader.md).
+[C05 : Reversing bootloader](/pages/C05/bootloader.md).
 
 - Firmware  
-[C05 : Reversing Firmware](./pages/C05/firmware.md).
+[C05 : Reversing Firmware](/pages/C05/firmware.md).
 
 
 # TODO, next module

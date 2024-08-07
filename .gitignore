@@ -4,3 +4,6 @@ Gemfile.lock
 *.gem
 .jekyll-cache
 flag
+*.o
+*.pyc
+__pycache__
