@@ -32,6 +32,9 @@ You can find all the sources and challenges ressources on the github, but i woul
 
 Modules aren't sorted by difficulties but by theme. Only C01 will be easier for introduction, the rest of modules will have linear difficulties in the challenge list.
 
+Also, only C01 will contains challenge source.
+For the other modules, you will need to work hard.
+
 # C01 - EntryPoint to reverse path
 
 In this module, you will learn the very basic of reverse : 
