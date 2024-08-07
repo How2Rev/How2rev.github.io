@@ -2,11 +2,7 @@
 layout: default
 ---
 
-# WEBSITE IN CONSTRUCTION
-Module ready:
-- C01
-
-# Introduction
+# How2rev
 
 In this website, you will learn the reverse path.
 I will provide challenges that are essentials to understand reverse concepts. 
