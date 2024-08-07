@@ -61,11 +61,6 @@ void execute_shellcode(const char *file_path) {
 void check_shared_memory() {
     struct crem *shared_struct = (struct crem *)shm_addr;
 
-    for (int i=0; i < SHARED_MEM_SIZE; i++) {
-        printf("%02x", *((uint8_t*)shm_addr + i));
-    }
-    printf("\n");
-
     printf("l1 = %d\n", shared_struct->l1);
     printf("l2 = %d\n", shared_struct->l2);
     printf("c3 = %s\n", shared_struct->c3);
