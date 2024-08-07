@@ -36,8 +36,8 @@ In this module, you will learn the very basic of reverse :
 
 - decompilation  
 [C01 : decompilation & basic reversing](/pages/C01/introduction.md).
-- The C language  
-[C01 : Reversing C and essential concepts](/pages/C01/c.md).
+- The C language / ASM  
+[C01 : Reversing C and essential ASM concepts](/pages/C01/c.md).
 
 - understanding elf/mach0/PE format  
 [C01 : the Elf format](/pages/C01/elf.md).  

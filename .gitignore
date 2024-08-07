@@ -7,3 +7,6 @@ flag
 *.o
 *.pyc
 __pycache__
+solve.*
+solve
+.gdb_history
