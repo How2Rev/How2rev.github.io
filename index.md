@@ -7,9 +7,8 @@ layout: default
 In this website, you will learn the reverse engineering path.
 I will provide challenges that are essentials to understand reverse concepts. 
 
-CTF-style challenge are a good way to understand basic concepts and masteries them. 
-With every concepts, you will have differents ressources to understand it with an associated challenge.
-For each concepts, you will face differents types of difficulties, which can be from easy to very complex challenge.
+CTF-style challenge are a good way to understand basic concepts and masteries them.  
+With every concepts, you will have differents ressources to understanding it with an associated challenge.  
 
 If you have questions, or difficulties, you can ask help on the discord server : https://discord.gg/t6DDyUxA4H
 
