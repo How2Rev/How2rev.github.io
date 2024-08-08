@@ -36,7 +36,7 @@ In this module, you will learn the very basic of reverse :
 
 [C01 : decompilation & basic reversing](/pages/C01/introduction.md).  
 [C01 : Reversing & Understanding C/ASM concepts](/pages/C01/c.md).  
-[C01 : the Elf format](/pages/C01/elf.md).
+[C01 : the Elf format](/pages/C01/elf.md).  
 [C01 : the mach0 format](/pages/C01/mach0.md). (todo)  
 [C01 : the PE format](/pages/C01/pe.md). (todo)  
 
