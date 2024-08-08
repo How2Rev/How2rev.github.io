@@ -15,7 +15,7 @@ Now that's your more familiar with Elf executable format, let's try some fun cha
 
 # C01-05 : Some unknow handlers (Easy)
 
-This program is weird. I reversed the main and the only thing i found is a int divided by 0. 
+This program is weird. I reversed the main and the only thing i found is a int divided by a int.
 With your understanding of ELF format, try to inspect all the importants data linked to an ELF, and you will see some hidden things!
 
 flag md5sum : 868b752cd2a517f9db545c4c744aa13c
