@@ -12,7 +12,7 @@ As an introduction to reverse, here a list of good ressources to understand basi
 If you readed all, congratz ! 
 Now you are familiar with reversing, let's start with basic challenges to see what's you learned.
 
-# C01-01 : A basic reversing problem
+# C01-01 : A basic reversing problem (Easy)
 
 Let's begin with a reverse engineering introduction.
 
@@ -26,7 +26,7 @@ md5sum : 9d3b71756ae18f4133ea930f779f0bdf
 
 [C01-01 : introduction1.bin](/assets/module/c01/01/introduction1.bin).
 
-# C01-02 : Encoding
+# C01-02 : Encoding (Easy)
 
 After introduction1, I eliminated plaintext passwords stored in memory. Now, my flags will be safeguarded by a highly secure algorithm!
 

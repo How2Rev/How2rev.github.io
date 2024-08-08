@@ -4,14 +4,14 @@ layout: default
 
 # How2rev
 
-In this website, you will learn the reverse path.
+In this website, you will learn the reverse engineering path.
 I will provide challenges that are essentials to understand reverse concepts. 
 
 CTF-style challenge are a good way to understand basic concepts and masteries them. 
-With every concept, you will have differents ressources to understand it and an associated challenge.
+With every concepts, you will have differents ressources to understand it with an associated challenge.
 For each concepts, you will face differents types of difficulties, which can be from easy to very complex challenge.
 
-IF you have questions, or difficulties, you can ask help on the discord server : https://discord.gg/t6DDyUxA4H
+If you have questions, or difficulties, you can ask help on the discord server : https://discord.gg/t6DDyUxA4H
 
 > Note : This website do not host lessons. All lessons are external hosted ressources. My goal is to catch up all good ressources for understand concepts and masteries them.
 Only self-created challenges and past CTF event binaries are hosted.
@@ -24,12 +24,12 @@ Each flag will be saved as LRCTF{} (or contrary mention)
 You can check if you get the right flag with a md5sum provided with each challenge :   
 `echo -n "LRCTF{theFlag}" | md5sum`
 
-You can find all the sources and challenges ressources on the github, but i would recommend to do the challenge before looking sources if you don't want to be spoiled.
+Modules aren't sorted by difficulties but by theme. Only C01 will be easier for introduction, the rest of modules will have linear complexity in the challenge list.
 
-Modules aren't sorted by difficulties but by theme. Only C01 will be easier for introduction, the rest of modules will have linear difficulties in the challenge list.
-
-Also, only C01 will contains challenge source.
+Also, only C01 will contains challenges source.
 For the other modules, you will need to work hard.
+
+A lot of challenges come from Past CTF Event or are selfmade. I recommend to not search writeup until a solid try out on a challenge, that's really better to learn by tryharding a difficult challenge.
 
 # C01 - EntryPoint to reverse path
 

@@ -23,7 +23,7 @@ Here a list of ressource you can work on to learn the basic of ASM.
 - [EN] [ASM x64 Exercices](https://github.com/yds12/x64-roadmap)
 - [Godbolt : See how a language code transform to ASM](https://godbolt.org/)
 
-# C01-03 : Shared memory
+# C01-03 : Shared memory (Easy+)
 
 Can you try to understand what's this program doing with the shared memory and internal structure ? 
 
@@ -35,7 +35,7 @@ md5sum : b130cdd87480917a1b2a75ad4bc177c6
 
 [C01-03 : introduction3.bin](/assets/module/c01/03/introduction3.bin).
 
-# C01-04 : IPC
+# C01-04 : IPC (Easy)
 
 In this challenge, a IPC is created and wait for a specific message.
 Horewer, there is a random event which is happening after receiving our message...

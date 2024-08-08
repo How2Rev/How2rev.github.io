@@ -1,7 +1,7 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -O0 -Wno-unused-but-set-variable
+CFLAGS = -Wall -Wextra -O0 -Wno-div-by-zero
 
-OUT="introduction4.bin"
+OUT="introduction5.bin"
 
 challenge: challenge.c
 	$(CC) $(CFLAGS) -o $(OUT) challenge.c
