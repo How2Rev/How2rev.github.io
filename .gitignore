@@ -11,3 +11,6 @@ solve.*
 solve
 .gdb_history
 challenge.*
+tilck
+*.sqlite
+*.i64

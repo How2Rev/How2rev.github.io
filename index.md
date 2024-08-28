@@ -2,89 +2,82 @@
 layout: default
 ---
 
-# How2rev
+# How2Rev
 
-In this website, you will learn the reverse engineering path.
-I will provide challenges that are essentials to understand reverse concepts. 
+In this website, you will learn the path to reverse engineering. I will provide challenges that are essential for understanding reverse engineering concepts.
 
-CTF-style challenge are a good way to understand basic concepts and masteries them.  
-With every concepts, you will have differents ressources to understanding it with an associated challenge.  
+CTF-style challenges are a great way to grasp basic concepts and master them.  
+With each concept, you will have different resources to help you understand it, along with an associated challenge.
 
-If you have questions, or difficulties, you can ask help on the discord server : https://discord.gg/t6DDyUxA4H
+If you have questions or difficulties, you can ask for help on the Discord server: https://discord.gg/t6DDyUxA4H
 
-> Note : This website do not host lessons. All lessons are external hosted ressources. My goal is to catch up all good ressources for understand concepts and masteries them.
-Only self-created challenges and past CTF event binaries are hosted.
+> Note: This website does not host lessons. All lessons are external resources. My goal is to gather all the best resources for understanding concepts and mastering them. Only self-created challenges and past CTF event binaries are hosted.
 
-# Disclaimer & Informations
+# Disclaimer & Information
 
-This website does not check if you do the right path, my purpose is to provide you a intended way to solve the challenge. You can probably solve by patching, or doing unintended solve but that's not the goal of this website.
+This website does not check if you follow the correct path. My purpose is to provide an intended way to solve the challenges. You might be able to solve them by patching or using unintended methods, but that’s not the goal of this website.
 
-Each flag will be saved as LRCTF{} (or contrary mention)
-You can check if you get the right flag with a md5sum provided with each challenge :   
+Each flag will be saved as LRCTF{} (or as otherwise mentioned).
+You can check if you have the correct flag with the provided md5sum for each challenge:  
 `echo -n "LRCTF{theFlag}" | md5sum`
 
-Modules aren't sorted by difficulties but by theme. Only C01 will be easier for introduction, the rest of modules will have linear complexity in the challenge list.
+Modules aren't sorted by difficulty but by theme. Only C01 will be easier as an introduction, while the rest of the modules will have a linear complexity in the challenge list.
 
-Also, only C01 will contains challenges source.
+Also, only C01 will contain challenge sources.
 For the other modules, you will need to work hard.
 
-A lot of challenges come from Past CTF Event or are selfmade. I recommend to not search writeup until a solid try out on a challenge, that's really better to learn by tryharding a difficult challenge.
+Many challenges come from past CTF events or are self-made. I recommend not searching for write-ups until you have made a solid attempt at a challenge—it’s much better to learn by trying hard to solve a difficult challenge.
 
-# C01 - EntryPoint to reverse path
+# C01 - Entry Point to the Reverse Engineering Path
 
-In this module, you will learn the very basic of reverse : 
+In this module, you will learn the basics of reverse engineering:
 
-[C01 : decompilation & basic reversing](/pages/C01/introduction.md).  
-[C01 : Reversing & Understanding C/ASM concepts](/pages/C01/c.md).  
-[C01 : the Elf format](/pages/C01/elf.md).  
-[C01 : the mach0 format](/pages/C01/mach0.md). (todo)  
-[C01 : the PE format](/pages/C01/pe.md). (todo)  
+[C01: Decompilation & Basic Reversing](/pages/C01/introduction.md).  
+[C01: Reversing & Understanding C/ASM Concepts](/pages/C01/c.md).  
+[C01: The ELF Format](/pages/C01/elf.md).  
+[C01: The Mach-O Format](/pages/C01/mach0.md). (todo)  
+[C01: The PE Format](/pages/C01/pe.md). (todo)  
+[C01: Function Diffing & Symbol Reconstruction](/pages/C01/diffing.md)
 
-# C02 - Language specific reversing
+# C02 - Language-Specific Reversing
 
-In this module, we will start with language specific reversing challenge that setup our journey
+In this module, we will start with language-specific reversing challenges that will set up our journey:
 
-[C02 : Understanding Rust reversing](/pages/C02/rust.md). (todo)   
-[C02 : Understanding C++ reversing](/pages/C02/c++.md). (todo)  
-[C02 : Understanding Haskell reversing](/pages/C02/haskell.md). (todo)  
+[C02: Understanding Rust Reversing](/pages/C02/rust.md). (todo)   
+[C02: Understanding C++ Reversing](/pages/C02/c++.md). (todo)  
+[C02: Understanding Haskell Reversing](/pages/C02/haskell.md). (todo)  
 
-# C03 - Mobile reversing
+# C03 - Mobile Reversing
 
-In this module, you will understand concepts linked to the mobile world.
+In this module, you will understand concepts related to the mobile world:
 
-[C03 : Understanding Android reversing](/pages/C03/apk.md). (todo)  
-[C03 : Understanding IOS reversing](/pages/C03/ios.md).(todo)  
+[C03: Understanding Android Reversing](/pages/C03/apk.md). (todo)  
+[C03: Understanding iOS Reversing](/pages/C03/ios.md).(todo)  
 
-# C04 - Obfuscation world
+# C04 - Obfuscation World
 
-In this module, you will face obfuscation challenge. This isn't a reference for real world problems but an introduction to methodology and efficiency to deal with problems like this.
+In this module, you will face obfuscation challenges. These challenges are not a reference for real-world problems but an introduction to methodologies and efficiency in dealing with such problems.
 
-[C04 : How to reverse a Virtual Machine obfuscation](/pages/C04/vm.md).(todo)  
-[C04 : Mixed Boolean Arithmetic obfuscation reversing](/pages/C04/mba.md).(todo)  
-[C04 : Control flow Flattening obfuscation reversing](/pages/C04/cff.md).(todo)  
+[C04: How to Reverse Virtual Machine Obfuscation](/pages/C04/vm.md).(todo)  
+[C04: Mixed Boolean Arithmetic Obfuscation Reversing](/pages/C04/mba.md).(todo)  
+[C04: Control Flow Flattening Obfuscation Reversing](/pages/C04/cff.md).(todo)  
 
+# C05 - Low-Level Reversing
 
-# C05 - Low level reversing
+In this module, we dive deep into low-level reversing, dealing with binaries that are difficult to emulate or debug. Here we will work with bootloaders, firmware, shellcode, etc.
 
-In this module, we deep dive into low level reversing, with binaries that are difficult to emulate, to debug. Here we will work with bootloader, firmware, shellcode...
+[C05: Custom Loader and How to Approach the Problem](/pages/C05/custom-loader.md).(todo)  
+[C05: Reversing Bootloaders](/pages/C05/bootloader.md).(todo)  
+[C05: Reversing Firmware](/pages/C05/firmware.md). (todo)  
 
-[C05 : Custom loader and how to approach the problem](/pages/C05/custom-loader.md).(todo)  
-[C05 : Reversing bootloader](/pages/C05/bootloader.md).(todo)  
-[C05 : Reversing Firmware](/pages/C05/firmware.md). (todo)  
+# C06 - Kernel Reversing
 
-# C06 - Kernel reversing
+In this module, we will explore resources associated with kernel reversing, concepts, and more:
 
-In this module, we will see ressources associated to kernel reversing, concepts and more...
+[C06: Rust Raspberry Pi Custom Kernel Challenge](/pages/C06/rust-custom-kernel.md).(todo)  
 
-[C06 : Rust Rasperry Pi custom kernel challenge ](/pages/C06/rust-custom-kernel.md).(todo)  
+# C07 - Cryptography Reversing
 
-# C07 - Crytography reversing
+This module will contain cryptography challenges. The goal here is not to become a master of crypto (Cryptohack is better for that) but to learn how to reverse and identify cryptographic code in binaries and how to deal with it.
 
-This module will contain cryptography challenge, the goal here is not to become a master of crypto (cryptohack is better for that) but to learn how to reverse and search cryptographic code in binaries and how to deal with them.
-
-[C07 : Search and Understand a cryptographic implementation in a code](/page/C07/crypto-basic-implem.md)
-
-# C08 - Malware reversing
-
-(todo)
-
+[C07: Search and Understand a Cryptographic Implementation in Code](/page/C07/crypto-basic-implem.md) (todo)

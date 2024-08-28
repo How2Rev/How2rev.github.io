@@ -2,46 +2,42 @@
 layout: default
 ---
 
-# The C language
+# The C Language
 
-The C language is essential to understand a program.
-A good reverser must learn and understand the C language and it's basic concepts, here a list of good ressources to understand C language : 
+The C language is essential for understanding how a program works. A good reverser must learn and understand the C language and its basic concepts. Here is a list of good resources to help you understand the C language: 
 
-- [EN] [C language (Begginer Level)](https://www.w3schools.com/c/)
-- [FR] [C language (Begginer Level)](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c)
+- [EN] [C Language (Beginner Level)](https://www.w3schools.com/c/)
+- [FR] [C Language (Beginner Level)](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c)
 
-If you readed all, congratz ! 
-Now you are familiar with the c language, let's start with basic challenges to see what's you learned.
+If you've read all of these, congratulations! Now you are familiar with the C language. Let's start with some basic challenges to see what you've learned.
 
 # ASM x64
 
-Asm is the machine code that are directly executed by the cpu.
-This is the must have skill for any reverser. 
-Here a list of ressource you can work on to learn the basic of ASM.
+Assembly (ASM) is the machine code that is directly executed by the CPU. This is a must-have skill for any reverser. Here is a list of resources you can use to learn the basics of ASM.
 
-- [EN] [ASM lesson x64](https://web.stanford.edu/class/cs107/guide/x86-64.html)
-- [EN] [ASM x64 Exercices](https://github.com/yds12/x64-roadmap)
-- [Godbolt : See how a language code transform to ASM](https://godbolt.org/)
+- [EN] [ASM Lesson x64](https://web.stanford.edu/class/cs107/guide/x86-64.html)
+- [EN] [ASM x64 Exercises](https://github.com/yds12/x64-roadmap)
+- [Godbolt: See how a language's code transforms to ASM](https://godbolt.org/)
 
-# C01-03 : Shared memory (Easy+)
+# C01-03: Shared Memory (Easy+)
 
-Can you try to understand what's this program doing with the shared memory and internal structure ? 
+Can you try to understand what this program is doing with the shared memory and internal structure? 
 
-A shared memory has been created at address 0x13000000. The program map and execute the shellcode given in argv[1].
+A shared memory segment has been created at address `0x13000000`. The program maps and executes the shellcode given in `argv[1]`.
 
-> It is strongly recommended to do the ASM x64 Exercices just before in ressources to do this challenge. The goal here is to learn with nasm how to write a basic shellcode.
+> It is strongly recommended to complete the ASM x64 Exercises listed in the resources before attempting this challenge. The goal here is to learn how to write basic shellcode with NASM.
 
-md5sum : b130cdd87480917a1b2a75ad4bc177c6
+`flag md5sum: b130cdd87480917a1b2a75ad4bc177c6`
 
-[C01-03 : introduction3.bin](/assets/module/c01/03/introduction3.bin).
+[C01-03: introduction3.bin](/assets/module/c01/03/introduction3.bin).
 
-# C01-04 : IPC (Easy)
+# C01-04: IPC (Easy)
 
-In this challenge, a IPC is created and wait for a specific message.
-Horewer, there is a random event which is happening after receiving our message...
+In this challenge, an IPC is created and waits for a specific message.
+However, there is a random event that occurs after receiving your message...
 
-Your goal here is to write a solver that send the right message, and patch the original program to remove the unfortunate byte swap. 
+Your goal here is to write a solver that sends the correct message and patches the original program to remove the unfortunate byte swap. 
 
-md5sum : f3985e9117865f5696182b17b973e822
+`flag md5sum: f3985e9117865f5696182b17b973e822`
 
-[C01-04 : introduction4.bin](/assets/module/c01/04/introduction4.bin).
+[C01-04: introduction4.bin](/assets/module/c01/04/introduction4.bin).
