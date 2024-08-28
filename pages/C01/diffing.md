@@ -41,7 +41,7 @@ f1: The function that was patched. It should be a poorly secured buffer that res
 # C01-08: Recovering Symbols of a Stripped Static Simple C Program
 
 In this challenge, we have 2 binaries:
-- `my_first_c_program.bin`: A simple C program that performs some basic libc calls and then exits.
+- `my_first_c_program`: A simple C program that performs some basic libc calls and then exits.
 - `libc.so.6`: The libc used to compile the program.
 
 The flag format is LRCTF{f1:f2:f3}, where
@@ -66,3 +66,6 @@ int main() {
 ```
 
 => flag = LRCTF{fopen:fread:fclose}
+
+[C01-08: my_first_c_program](/assets/module/c01/08/my_first_c_program)  
+[C01-08: libc.so.6](/assets/module/c01/08/libc.so.6)  
