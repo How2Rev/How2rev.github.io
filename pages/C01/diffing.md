@@ -9,6 +9,7 @@ Diffing is an essential concept when working with binaries and frameworks. It al
 Here is a list of resources you can read to understand this concept:  
 - [EN] [Introduction to binary diffing](https://www.orangecyberdefense.com/be/blog/introduction-to-binary-diffing-part-2)
 - [EN] [Blackhat Talk: Issues with CVE patches & the easy introduction of 1-day exploits](https://www.blackhat.com/presentations/bh-usa-09/OH/BHUSA09-Oh-DiffingBinaries-SLIDES.pdf)
+- [FR] [En Bref #01 - Diffing & Symbols recuperation](https://www.youtube.com/watch?v=owDu_ULlzfk)
 
 To assist you in binary diffing, here are some commonly used tools:
 - **BinDiff**: A popular tool used for comparing binaries.
