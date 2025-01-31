@@ -2,16 +2,281 @@
 layout: default
 ---
 
-# Introduction
+# Recommended Ressource
 
 As an introduction to reverse engineering, here is a list of good resources to help you understand basic concepts and get started:
 
-- [EN] [Lessons in Reversing (Beginner Level)](https://0xinfection.github.io/reversing/)
 - [FR] [Lessons in Reversing (Beginner Level)](https://reverse.zip/categories/introduction-au-reverse/)
 - [EN] [C Language (Beginner Level)](https://www.w3schools.com/c/)
 - [FR] [C Language (Beginner Level)](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c)
 - [Godbolt: See how a language's code transforms to ASM](https://godbolt.org/)
 
+# Reverse-Engineering : Key concept
+
+## Way of Reversing
+
+There are two basic techniques for analyzing malware: `static analysis` and `dynamic analysis`.
+
+`Static analysis` examines the executable without running it, using tools to inspect the decompiled instructions. We will focus on `dynamic analysis`, which involves using disassemblers and debuggers to analyze binaries while running them.
+
+Popular tools include `IDA`, a multi-platform disassembler and debugger, and others like `Ghidra` and `Binary Ninja`. A disassembler converts an executable into `Assembly Language` instructions for debugging and manipulation.
+
+let's start with necessary knowledge
+
+## Binary Number System
+
+Binary numbers are fundamental to computers. A bit is either on (1) or off (0). In binary, each column's value is twice that of the column to its right, using only 0 and 1.
+
+In decimal (base 10), the number 15 is calculated as (1 x 10) + (5 x 1) = 15. In binary (base 2), the same number is `1111`.
+We can compute it like this:
+
+![base2](/pages/C01/img/intro/base2.png)
+
+So, with 4 bits we can go to `0 to 15`  
+with 4 more bits, we have 16+32+64+128 => we can go now to `0 to 255`  
+
+Binary simplifies computer design by using only two digits, unlike the decimal system which uses ten digits (0-9).
+
+## Hexadecimal Number System
+
+We learned that each number in binary represents a bit. Combining 8 bits gives us a byte, which can be divided into its top 4 bits and low 4 bits, called nibbles. Since 4 bits range from `0` to `15`, a base `16` system (hexadecimal) is easier to work with. 
+
+Hexadecimal is used in x86 Assembly because it simplifies binary representation. Each column in hexadecimal has a value `16` times that of the column to its right. Besides `0-9`, hexadecimal includes `A-F`, providing `16` different symbols.
+
+Here is an example on how to convert easily: 
+
+Decimal : 255
+```
+255 ÷ 16  →  Quotient = 15,  Remainder = 15 (F)
+15 ÷ 16  →  Quotient = 0,   Remainder = 15 (F)
+```
+So 255 = FF in hexadecimal
+
+## Value formating : Bytes, Words, ...
+
+Memory is measured in bytes. A byte is `8 bits`. Two bytes form a `word`, four bytes form a `double word` (32-bit), and eight bytes form a `quad word` (64-bit).
+
+A byte, being `2^8`, has `256` possible values, ranging from `0` to `255`.
+
+For example , see the following C code : 
+
+```c
+int a;
+short b;
+unsigned char c; 
+```
+
+Here int is `integer` : 4byte of data => 4*8bits = 32bits!
+
+But there is a trap ! For an unsigned integer (32-bit), the range is from `0 to 2^32 - 1`, which is `0 to 4,294,967,295`.
+
+For a signed integer (32-bit), the range is:
+
+Positive range: From `0 to 2^31 - 1` (i.e., 0 to 2,147,483,647).
+Negative range: From `-2^31 to -1` (i.e., -2,147,483,648 to -1).
+Thus, the total range for a 32-bit signed integer is from `-2,147,483,648 to 2,147,483,647`.
+
+1 bit is used for sign. 
+
+Then Short is 2bytes : 16bits of signed data  
+And for finish : unsigned char is 1byte of unsigned data => `0 to 255`  
+
+> Integer overflow are a common source of vulnerability ! 
+
+For example, play around with this Python code and see what value will overflow a type and bypass the check!
+```python
+import ctypes
+
+def add_tax_and_buy_house(user_input):
+    tax = 10000
+    price_final = ctypes.c_uint32(user_input + tax).value
+
+    print(f"You buyed house with {price_final}$")
+    if price_final >= 10000:
+        print(f"So much money spent on this house...")
+    else:
+        print("how did you trick me")
+
+user_input = int(input("Enter your price to buy a house: "))
+add_tax_and_buy_house(user_input)
+```
+# x86 Basic Architecture
+
+![computer_architecture](/pages/C01/img/intro/computer_architecture.jpg)
+
+The CPU consists of four main composants:
+
+- **Control Unit**: Retrieves, decodes, and manages instructions from memory.
+- **Execution Unit**: Executes instructions and performs calculations.
+- **Registers**: Temporary storage for data within the CPU.
+- **Flags**: Indicate events during execution.
+
+
+![cpu_unit](/pages/C01/img/intro/cpu_unit.jpg)
+
+## Common Registers
+
+The general-purpose registers temporarily store data during processing. We'll focus on the 32-bit x86 architecture.
+
+Each new version of these registers is backward compatible. Let's review the 8 general-purpose registers in IA-32 architecture:
+
+- `EAX`: Main register for arithmetic calculations, also known as the accumulator.
+- `EBX`: Base Register, points to data in the `DS` segment.
+- `ECX`: Counter register, used for loops and string operations.
+- `EDX`: General-purpose register, extends `EAX` to 64-bits, used for I/O operations.
+- `ESI`: Source Index, points to data in the `DS` segment, used in string and array operations.
+- `EDI`: Destination Index, points to data in the `ES` segment, used in string and array operations.
+- `EBP`: Base Pointer, points to data on the stack (`SS` segment), references local variables.
+- `ESP`: Stack Pointer, points to the top of the stack frame, references local variables.
+
+Each register is `32-bit` (4 bytes). The lower 2 bytes of `EAX`, `EBX`, `ECX`, and `EDX` can be referenced by `AX`, and subdivided into `AH` (high byte) and `AL` (low byte). `ESI`, `EDI`, `EBP`, and `ESP` can be referenced by their 16-bit equivalents: `SI`, `DI`, `BP`, `SP`.
+
+![x86registers](/pages/C01/img/intro/x86-registers.png)
+
+## Segment Registers
+
+## Segment Registers
+
+Segment registers reference memory locations. We'll focus on the flat memory model.
+
+There are six segment registers:
+
+- `CS`: Code segment, stores the base location of the code section (`.text`).
+- `DS`: Data segment, stores the default location for variables (`.data`).
+- `ES`: Extra segment, used during string operations.
+- `SS`: Stack segment, stores the base location of the stack.
+- `FS`: Extra segment.
+- `GS`: Extra segment.
+
+Each segment register is `16-bit` and points to the start of a memory segment. The `CS` register points to the code segment, where instruction codes are stored. The processor retrieves instructions based on the `CS` value and an offset in the `EIP` register. Programs cannot explicitly change the `CS` register; the processor assigns its values.
+
+The `DS`, `ES`, `FS`, and `GS` registers point to data segments, helping to separate data elements and prevent overlap. The `SS` register points to the stack segment, which contains data values passed to functions and procedures.
+
+## Instruction Pointer Register
+
+The `EIP` (Extended Instruction Pointer) register in x86 architecture holds the address of the next instruction to be executed. It is a crucial component of the CPU's control flow, ensuring that instructions are processed in the correct sequence. The `EIP` register is automatically updated after each instruction fetch, pointing to the subsequent instruction. Direct manipulation of `EIP` is not possible through regular instructions; instead, it is modified by control flow instructions such as jumps (`jmp`), calls (`call`), and returns (`ret`). This register is essential for the execution of programs, as it dictates the flow of execution within the code segment.
+
+For example, this nop loop : 
+
+```asm
+section .text
+global _start
+
+; assuming _start is at adress : 0x40000
+_start:
+    ; Simple instructions
+    nop ; EIP¨= 0x40000 (nop is a 1byte instruction)
+    jmp _start ; EIP = 0x40001 => jump to 0x40000
+```
+## Control Registers
+
+Control registers determine the CPU's operating mode and task characteristics. There are five control registers:
+
+- `CR0`: Controls the operating mode and processor states.
+- `CR1`: (Not Implemented)
+- `CR2`: Holds memory page fault information.
+- `CR3`: Contains memory page directory information.
+- `CR4`: Flags for processor features and capabilities.
+
+Values in control registers can't be directly accessed. Instead, data can be moved to a general-purpose (GP) register for examination or modification. Kernel programmers typically modify control registers, while userland programs may query them to determine processor capabilities.
+
+## Flags
+
+Flags are crucial in assembly language and program flow control, helping to verify and control program execution. The `EFLAGS` register in 32-bit assembly contains 32 bits of status, control, and system flags.
+
+### Status Flags
+- `CF`: **Carry Flag** - Set on unsigned integer overflow.
+- `PF`: **Parity Flag** - Set if the number of 1 bits is even.
+- `AF`: **Adjust Flag** - Set on carry/borrow from bit 3.
+- `ZF`: **Zero Flag** - Set if the result is zero.
+- `SF`: **Sign Flag** - Set to the sign bit of the result.
+- `OF`: **Overflow Flag** - Set on signed integer overflow.
+
+### Control Flags
+- `DF`: **Direction Flag** - Controls string operation direction.
+
+### System Flags
+- `TF`: **Trap Flag** - Enables single-step mode for debugging.
+- `IF`: **Interrupt Enable Flag** - Controls response to external signals.
+- `IOPL`: **I/O Privilege Level Flag** - Defines access levels for I/O address space.
+- `NT`: **Nested Task Flag** - Links current task to the previous one.
+- `RF`: **Resume Flag** - Controls response to exceptions in debugging.
+- `VM`: **Virtual-8086 Mode Flag** - Indicates virtual-8086 mode.
+- `AC`: **Alignment Check Flag** - Enables alignment checking.
+- `VIF`: **Virtual Interrupt Flag** - Replicates `IF` in virtual mode.
+- `VIP`: **Virtual Interrupt Pending Flag** - Indicates pending interrupt in virtual mode.
+- `ID`: **Identification Flag** - Indicates support for `CPUID` instruction.
+
+Flags ensure each operation's success and are essential for debugging and control in assembly language.
+
+Here's an example of how the `cmp` instruction works in assembly, showing which flag is set and how the `jz` (jump if zero) instruction uses the flag to branch to another part of the code:
+
+```asm
+section .text
+    global _start
+
+_start:
+    mov eax, 5      ; Load 5 into eax
+    mov ebx, 5      ; Load 5 into ebx
+    cmp eax, ebx    ; Compare eax and ebx => they are the same so ZF is set to 1
+    jz values_equal ; Jump to values_equal if zero flag (ZF) is set
+    nop ; else, execute this if ZF is not set
+
+value_equal:
+    nop
+```
+
+In this example:
+- The `cmp` instruction compares the values in `eax` and `ebx`.
+- If the values are equal, the zero flag (ZF) is set.
+- The `jz` instruction checks the zero flag and jumps to the `values_equal` label if the flag is set.
+- If the values are not equal, the code continues and execute next instruction : `nop`
+
+## Stack
+
+The stack grows downward from higher to lower memory addresses. The stack bottom is the highest valid address, and the stack limit is the lowest valid address. If the stack pointer goes below this, a stack overflow occurs, potentially allowing an attacker to take control. Modern OS protections help prevent this.
+
+The stack operations are `push` and `pop`. `Push` sets the stack pointer to a smaller value and copies registers to the stack. `Pop` copies data from the stack to registers and adds to the stack pointer.
+
+Each function call reserves a section of the stack called the `stack frame`, which contains:
+
+- **Return Address**: The address to return to after the function completes.
+- **Saved Registers**: Registers saved to preserve the calling function's state.
+- **Local Variables**: Variables declared within the function.
+- **Function Parameters**: Arguments passed to the function.
+- **Stack Pointer (SP)**: Points to the top of the stack.
+- **Base Pointer (BP)**: Points to a fixed location within the stack frame for accessing parameters and variables.
+
+For example, this C code: 
+
+```c
+int foobar(int a, int b, int c)
+{
+    int xx = a + 2; // the compiler must push xx,yy,zz to stack as there are in locals variable
+    int yy = b + 3;
+    int zz = c + 4;
+    int sum = xx + yy + zz;
+
+    return xx * yy * zz + sum;
+}
+
+int main()
+{
+    return foobar(77, 88, 99); // push a,b,c args in stack (in x86, different in 64bits)
+}
+```
+
+is represented in stack as :
+
+![stackframe1](/pages/C01/img/intro/stackframe1.png)
+
+## Heap
+
+The heap is a free-floating memory region managed by the CPU, larger than the stack. To allocate memory on the heap (userland, different on kernel side but same process), use `malloc()` or `calloc()`, and free it with `free()` to avoid memory leaks. Unlike the stack, the heap has no size restrictions and is accessible globally, making it ideal for large or dynamically-sized variables like arrays and structs. Heap memory is slower due to pointer access but necessary for variables that need to persist and be accessed globally.
+
+For dynamic memory management, use `malloc()`, `calloc()`, `realloc()`, and `free()`.
+
+-----------------------------
 
 If you've read all of these, congratulations! Now that you are familiar with reversing, let's start with some basic challenges to see what you've learned.
 

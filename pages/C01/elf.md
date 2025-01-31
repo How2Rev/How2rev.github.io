@@ -1,13 +1,15 @@
 ---
 layout: default
 ---
-
-# ELF Loader
+# Recommended Ressource
 
 ELF (Executable and Linkable Format) is the most common binary format for Linux/Unix distributions. Its primary purpose is to contain essential information that allows the kernel to launch processes. Here is a list of good resources to help you understand how it works:
 
 - [EN] [ELF Format](https://www.gabriel.urdhr.fr/2015/09/28/elf-file-format/)
 - [FR] [ELF Format](https://sysblog.informatique.univ-paris-diderot.fr/2024/04/01/le-format-elf-executable-and-linkable-format/)
+
+
+# ELF Loader
 
 > Original lesson ressource from cpu.land
 

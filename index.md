@@ -11,7 +11,7 @@ With each concept, you will have different resources to help you understand it, 
 
 If you have questions or difficulties, you can ask for help on the Discord server: https://discord.gg/t6DDyUxA4H
 
-> Note: This website does not host lessons. All lessons are external resources. My goal is to gather all the best resources for understanding concepts and mastering them. Only self-created challenges and past CTF event binaries are hosted.
+> Note: This website host self created lessons and external lessons, as well for challenge. My goal is to gather all the best resources for understanding concepts and mastering them.
 
 # Disclaimer & Information
 
@@ -20,11 +20,6 @@ This website does not check if you follow the correct path. My purpose is to pro
 Each flag will be saved as LRCTF{} (or as otherwise mentioned).
 You can check if you have the correct flag with the provided md5sum for each challenge:  
 `echo -n "LRCTF{theFlag}" | md5sum`
-
-Modules aren't sorted by difficulty but by theme. Only C01 will be easier as an introduction, while the rest of the modules will have a linear complexity in the challenge list.
-
-Also, only C01 will contain challenge sources.
-For the other modules, you will need to work hard.
 
 Many challenges come from past CTF events or are self-made. I recommend not searching for write-ups until you have made a solid attempt at a challenge—it’s much better to learn by trying hard to solve a difficult challenge.
 
