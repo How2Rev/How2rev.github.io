@@ -41,6 +41,6 @@ In this module, you will learn the basics of reverse engineering:
 
 In this module, we dive deep into low-level reversing, dealing with binaries that are difficult to emulate or debug. Here we will work with bootloaders, firmware, shellcode, etc.
 
-[C02: Introduction to Custom loaders](/pages/C02/loaders.md)
-[C02: Custom CPU : A basic approach](/pages/C02/cpu.md)
+[C02: Introduction to Custom loaders & Emulation](/pages/C02/loaders-and-emulation.md)  
+[C02: Custom CPU : A basic approach](/pages/C02/cpu.md)  
 

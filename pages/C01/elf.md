@@ -8,6 +8,7 @@ ELF (Executable and Linkable Format) is the most common binary format for Linux/
 
 - [EN] [ELF Format](https://www.gabriel.urdhr.fr/2015/09/28/elf-file-format/)
 - [FR] [ELF Format](https://sysblog.informatique.univ-paris-diderot.fr/2024/04/01/le-format-elf-executable-and-linkable-format/)
+- [EN] [Elf Explained](https://cpu.land/becoming-an-elf-lord)
 
 
 ## How ELF Loader Works

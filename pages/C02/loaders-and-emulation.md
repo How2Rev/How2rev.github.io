@@ -54,10 +54,10 @@ Best of luck. The flag format is LRCTF{PrintableAscii}.
 
 The C0FF file structure includes:
 - A magic header (4 bytes)
-- An encryption shellcode flag (1 byte) -> 0 : no encryption | 1 : shellcode encrypted
+- An encryption shellcode flag (1 byte) (0 : no encryption | 1 : shellcode encrypted)  
 - RAX register pre-execution value (C0FF_SET_VM_REG_RAX : 8bytes)
 - RDI register pre-execution value (C0FF_SET_VM_REG_RDI : 8bytes)
-- An encryption key (120 bytes)
+- An encryption key (16 bytes)
 - pad (3bytes)
 - The actual shellcode (encrypted or not)  
 
