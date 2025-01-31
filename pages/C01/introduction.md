@@ -17,9 +17,8 @@ Let's begin with an introduction to reverse engineering.
 
 The primary goal of this initial challenge is to gain a comprehensive understanding of various perspectives and basics within a basic disassembler. The flag is a password checker distributed across different locations, requiring you to explore a disassembler of your preference (such as IDA, Ghidra, BinaryNinja, etc.) to locate and piece together the complete flag.
 
-For this challenge, the flag format is LRCTF{flag}.
-
-`flag md5sum: 9d3b71756ae18f4133ea930f779f0bdf`
+For this challenge, the flag format is LRCTF{flag}.  
+You can validate with the password checker
 
 [C01-01: introduction1.bin](/assets/module/c01/01/introduction1.bin).
 
@@ -36,7 +35,7 @@ In reverse engineering, when encountering an end program value (transformed from
 
 Which approach will you take?
 
-`flag md5sum: 2e3d9f4dc5d118cb8abaab1d8b22ea4e`
+You can validate with the password checker
 
 [C01-02: introduction2.bin](/assets/module/c01/02/introduction2.bin).
 

@@ -17,6 +17,18 @@ To assist you in binary diffing, here are some commonly used tools:
 
 Let's start with a basic challenge to apply this concept.
 
+## Types of Diffing
+
+Diffing heuristics are techniques used to identify differences between binaries. These heuristics can be broadly categorized into several types:
+
+1. **Syntax-based Diffing**: This method compares the syntactic structure of code, such as instructions and control flow graphs, to find differences.
+2. **Semantic-based Diffing**: This approach focuses on the meaning and behavior of the code, comparing the effects of instructions and functions.
+3. **Pattern-based Diffing**: This technique uses predefined patterns or signatures to detect known changes or vulnerabilities.
+4. **Statistical Diffing**: This method employs statistical analysis to identify anomalies or significant changes in the binary data.
+5. **Hybrid Diffing**: Combines multiple heuristics to improve accuracy and effectiveness in identifying differences.
+
+Each type of heuristic has its strengths and weaknesses, and the choice of heuristic depends on the specific requirements and context of the diffing task.
+
 # C01-07: Finding the Vulnerable Function
 
 In this challenge, we have 2 binaries: 
