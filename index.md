@@ -38,3 +38,8 @@ In this module, we dive deep into low-level reversing, dealing with binaries tha
 [C02: Emulation & Custom Loaders](/pages/C02/loaders-and-emulation.md)  
 [C02: CPU Introduction](/pages/C02/cpu.md)  
 
+# C03 - Obfuscation world
+
+In this module, you will explore various obfuscation techniques used to make reverse engineering more challenging. You will learn about different methods of code obfuscation, how to identify them, and strategies to deobfuscate and analyze obfuscated code.
+
+[C03: Virtual Obfuscation](/pages/C03/vm.md)  

@@ -372,7 +372,7 @@ There are many security concepts (Canary, ASLR, etc.), but we won't analyze them
 
 If you've read all of these, congratulations! Now that you are familiar with reversing, let's start with some basic challenges to see what you've learned.
 
-# C01-01: A Basic Reversing Problem (Easy)
+# C01-01: A Basic Reversing Problem (Easy--)
 
 Let's begin with an introduction to reverse engineering.
 
@@ -383,7 +383,7 @@ You can validate with the password checker
 
 [C01-01: introduction1.bin](/assets/module/c01/01/introduction1.bin).
 
-# C01-02: Encoding (Easy)
+# C01-02: Encoding (Easy+)
 
 After introduction1, I eliminated plaintext passwords stored in memory. Now, my flags will be safeguarded by a highly secure algorithm!
 
@@ -402,7 +402,7 @@ You can validate with the password checker
 
 Now that you're familiar with basic C reversing, let's see if you can understand more advanced C concepts!
 
-# C01-03: Shared Memory (Easy+)
+# C01-03: Shared Memory (Easy-)
 
 Can you try to understand what this program is doing with the shared memory and internal structure? 
 
@@ -414,7 +414,7 @@ A shared memory segment has been created at address `0x13000000`. The program ma
 
 [C01-03: introduction3.bin](/assets/module/c01/03/introduction3.bin).
 
-# C01-04: IPC & Patching binary (Easy)
+# C01-04: IPC & Patching binary (Easy+)
 
 In this challenge, an IPC is created and waits for a specific message.
 However, there is a random event that occurs after receiving your message...

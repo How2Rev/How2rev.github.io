@@ -95,7 +95,7 @@ In summary, they are both potent tools and in the context of diffing Windows pat
 
 In the final part of this blog series, we will step through the process of diffing a Windows patch using the BinDiff tool.
 
-# C01-07: Finding the Vulnerable Function
+# C01-07: Finding the Vulnerable Function (Medium--)
 
 In this challenge, we have 2 binaries: 
 - `v8_AFHXc8001.bin`: The old kernel of an IT company that was recently 0day'd...
@@ -117,7 +117,7 @@ f1: The function that was patched. It should be a poorly secured buffer that res
 [C01-07: v8_AFHXc8001.bin](/assets/module/c01/07/v8_AFHXc8001.bin)  
 [C01-07: v8_AFHXc8002.bin](/assets/module/c01/07/v8_AFHXc8002.bin)  
 
-# C01-08: Recovering Symbols of a Stripped Static Simple C Program
+# C01-08: Recovering Symbols of a Stripped Static Simple C Program (Easy)
 
 In this challenge, we have 2 binaries:
 - `my_first_c_program`: A simple C program that performs some basic libc calls and then exits.
