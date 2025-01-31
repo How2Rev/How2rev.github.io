@@ -6,6 +6,7 @@ layout: default
 ## Ressource
 
 - [EN] [Loader Explained](https://www.naukri.com/code360/library/what-is-loader)
+- [EN] [Analysing a malformated ELF with unicorn](https://binaryresearch.github.io/2019/09/17/Analyzing-ELF-Binaries-with-Malformed-Headers-Part-1-Emulating-Tiny-Programs.html)
 
 ## What is a Loader?
 
