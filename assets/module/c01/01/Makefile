@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99 -O0 -Wno-unused-but-set-variable -Wl,-Tlinker.ld 
+CFLAGS = -Wall -Wextra -std=c99 -O3 -Wl,-Tlinker.ld -ldl -Wno-pointer-to-int-cast
 
 OUT="introduction1.bin"
 

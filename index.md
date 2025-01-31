@@ -35,49 +35,5 @@ In this module, you will learn the basics of reverse engineering:
 [C01: Decompilation & Basic Reversing](/pages/C01/introduction.md).  
 [C01: Reversing & Understanding C/ASM Concepts](/pages/C01/c.md).  
 [C01: The ELF Format](/pages/C01/elf.md).  
-[C01: The Mach-O Format](/pages/C01/mach0.md). (todo)  
-[C01: The PE Format](/pages/C01/pe.md). (todo)  
 [C01: Function Diffing & Symbol Reconstruction](/pages/C01/diffing.md)
 
-# C02 - Language-Specific Reversing
-
-In this module, we will start with language-specific reversing challenges that will set up our journey:
-
-[C02: Understanding Rust Reversing](/pages/C02/rust.md). (todo)   
-[C02: Understanding C++ Reversing](/pages/C02/c++.md). (todo)  
-[C02: Understanding Haskell Reversing](/pages/C02/haskell.md). (todo)  
-
-# C03 - Mobile Reversing
-
-In this module, you will understand concepts related to the mobile world:
-
-[C03: Understanding Android Reversing](/pages/C03/apk.md). (todo)  
-[C03: Understanding iOS Reversing](/pages/C03/ios.md).(todo)  
-
-# C04 - Obfuscation World
-
-In this module, you will face obfuscation challenges. These challenges are not a reference for real-world problems but an introduction to methodologies and efficiency in dealing with such problems.
-
-[C04: How to Reverse Virtual Machine Obfuscation](/pages/C04/vm.md).(todo)  
-[C04: Mixed Boolean Arithmetic Obfuscation Reversing](/pages/C04/mba.md).(todo)  
-[C04: Control Flow Flattening Obfuscation Reversing](/pages/C04/cff.md).(todo)  
-
-# C05 - Low-Level Reversing
-
-In this module, we dive deep into low-level reversing, dealing with binaries that are difficult to emulate or debug. Here we will work with bootloaders, firmware, shellcode, etc.
-
-[C05: Custom Loader and How to Approach the Problem](/pages/C05/custom-loader.md).(todo)  
-[C05: Reversing Bootloaders](/pages/C05/bootloader.md).(todo)  
-[C05: Reversing Firmware](/pages/C05/firmware.md). (todo)  
-
-# C06 - Kernel Reversing
-
-In this module, we will explore resources associated with kernel reversing, concepts, and more:
-
-[C06: Rust Raspberry Pi Custom Kernel Challenge](/pages/C06/rust-custom-kernel.md).(todo)  
-
-# C07 - Cryptography Reversing
-
-This module will contain cryptography challenges. The goal here is not to become a master of crypto (Cryptohack is better for that) but to learn how to reverse and identify cryptographic code in binaries and how to deal with it.
-
-[C07: Search and Understand a Cryptographic Implementation in Code](/page/C07/crypto-basic-implem.md) (todo)

@@ -15,11 +15,9 @@ If you've read all of these, congratulations! Now that you are familiar with rev
 
 Let's begin with an introduction to reverse engineering.
 
-The primary goal of this initial challenge is to gain a comprehensive understanding of various perspectives and basics within a basic disassembler. The flag is distributed across different locations, requiring you to explore a disassembler of your preference (such as IDA, Ghidra, BinaryNinja, etc.) to locate and piece together the complete flag.
+The primary goal of this initial challenge is to gain a comprehensive understanding of various perspectives and basics within a basic disassembler. The flag is a password checker distributed across different locations, requiring you to explore a disassembler of your preference (such as IDA, Ghidra, BinaryNinja, etc.) to locate and piece together the complete flag.
 
-For this challenge, the flag format is LRCTF{firstpart:secondpart:thirdpart:fourthpart}.
-
-> You can find much of the flag using `strings`, but I recommend using a decompiler (Ghidra/BinaryNinja/IDA) to open the binary and understand where each flag part comes from.
+For this challenge, the flag format is LRCTF{flag}.
 
 `flag md5sum: 9d3b71756ae18f4133ea930f779f0bdf`
 

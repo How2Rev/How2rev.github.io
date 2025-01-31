@@ -30,8 +30,12 @@ SECTIONS {
         *(.bss .bss.*)
     }
 
-    .part4_thE_World ALIGN (0x1000) : {
-        *(.part4_thE_World)
+    . = 0x30343530;
+    .custom_section_name : 
+    {
+        PROVIDE(custom_section_start = .);
+        *(.custom_section_name)
+        PROVIDE(custom_section_end = .);
     }
 
     .debug_info ALIGN(0x4) : { *(.debug_info) }
