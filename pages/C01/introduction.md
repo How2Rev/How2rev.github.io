@@ -276,6 +276,98 @@ The heap is a free-floating memory region managed by the CPU, larger than the st
 
 For dynamic memory management, use `malloc()`, `calloc()`, `realloc()`, and `free()`.
 
+## Some basic reversing examples
+
+### Simple C Program: Key Check
+
+This simple C program demonstrates a basic key check within a function. The program defines a function `check_key` that takes an integer as an argument and compares it to a predefined key value `0x1234`. If the key matches, the function returns `1` (true); otherwise, it returns `0` (false).
+
+Here's the code:
+
+```c
+#include <stdio.h>
+
+int check_key(int key) {
+    if (key == 1234) {
+        return 1; // Key matches
+    } else {
+        return 0; // Key does not match
+    }
+}
+
+int main() {
+    int user_key;
+    printf("Enter the key: ");
+    scanf("%d", &user_key);
+
+    if (check_key(user_key)) {
+        printf("Key is correct!\n");
+    } else {
+        printf("Key is incorrect.\n");
+    }
+
+    return 0;
+}
+```
+
+we can compile it with `GCC` : `gcc program.c -o program`
+
+Let's see what's happening in our favorite disassembler : `IDA` 
+
+The `IDA` will display a basic view containing some usefull informations : 
+The IDA interface is divided into several key panels that provide essential information for reverse engineering:
+
+1. **Disassembly View**: Displays the assembly code of the binary, showing the instructions and their addresses.
+2. **Hex View**: Shows the raw hexadecimal representation of the binary data.
+3. **Function Window**: Lists all the functions identified in the binary, allowing quick navigation.
+4. **Graph View**: Visualizes the control flow of functions, making it easier to understand the program's structure.
+5. **Stack View**: Displays the current state of the stack, useful for tracking function calls and local variables.
+6. **Registers View**: Shows the values of the CPU registers during debugging.
+7. **Output Window**: Logs messages and output from various IDA operations.
+
+These panels provide a comprehensive overview of the binary, aiding in the reverse engineering process.
+
+There is more pannels but we will use the basics pannel. 
+Now `double left click` on main in the Functions pannels. You can press `Ctrl+F` if mouse is inside function pannel to search a Function.
+
+![ida1](/pages/C01/img/intro/ida1.png)
+
+By default, you will have three modes of view:
+
+- **Graph view**: Visualizes the control flow of functions.
+- **Pseudo-code view**: Shows decompiled source code based on heuristics.
+- **Disassembler view**: Displays raw disassembled instructions.
+
+For example Pseudo-code (Decompiler) view : 
+
+![ida2](/pages/C01/img/intro/ida2.png)
+
+and Disassembler View : 
+
+![ida3](/pages/C01/img/intro/ida3.png)
+
+> It's tempting to rely solely on the decompiler and ignore the `ASM` and `Graph` views. However, beginners in reverse engineering should not neglect basic `ASM` comprehension. This is crucial, as relying only on the decompiler is like navigating a boat without knowing how to swim—if the boat crashes, you're in trouble!
+
+You can also press Tab when ASM View to switch to Decompiler view.
+Or space in ASM view to switch to Graph view. 
+Or simply put view as you like in the general window of IDA. Customize as you want!
+
+## Additional information before going challenge
+
+In the decompiler view, we see this: 
+
+```c
+v5 = __readfsqword(0x28);
+```
+
+This wasn't in the original C code. Why is it there? In system security, concepts like canaries help secure programs. After long hours of coding in C, mistakes can happen, potentially leading to vulnerabilities.
+
+The `v5 = __readfsqword(0x28)` refers to a canary, an 8-byte value stored in the stack. When a function ends, it checks the stored canary. If it differs, the program detects altered flow and crashes for safety.
+
+This check isn't shown in the decompiler but is visible in the Graph/ASM view (More reason to not entirely rely on decompiler !). At address `0x1248`, the program checks the canary: it retrieves an 8-byte value from the stack, compares it to the stored value, and crashes if they differ.
+
+There are many security concepts (Canary, ASLR, etc.), but we won't analyze them now.
+
 -----------------------------
 
 If you've read all of these, congratulations! Now that you are familiar with reversing, let's start with some basic challenges to see what you've learned.
