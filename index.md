@@ -33,7 +33,6 @@ Many challenges come from past CTF events or are self-made. I recommend not sear
 In this module, you will learn the basics of reverse engineering:
  
 [C01: Decompilation & Basic Reversing](/pages/C01/introduction.md).  
-[C01: Reversing & Understanding C/ASM Concepts](/pages/C01/c.md).  
 [C01: The ELF Format](/pages/C01/elf.md).  
 [C01: Function Diffing & Symbol Reconstruction](/pages/C01/diffing.md)
 
@@ -41,6 +40,6 @@ In this module, you will learn the basics of reverse engineering:
 
 In this module, we dive deep into low-level reversing, dealing with binaries that are difficult to emulate or debug. Here we will work with bootloaders, firmware, shellcode, etc.
 
-[C02: Introduction to Custom loaders & Emulation](/pages/C02/loaders-and-emulation.md)  
-[C02: Custom CPU : A basic approach](/pages/C02/cpu.md)  
+[C02: Emulation & Custom Loaders](/pages/C02/loaders-and-emulation.md)  
+[C02: CPU Introduction](/pages/C02/cpu.md)  
 

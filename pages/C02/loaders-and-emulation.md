@@ -25,6 +25,21 @@ A loader is a part of an operating system that is responsible for loading progra
 - **Relocating Loader**: Loads the program into any available memory location and adjusts addresses accordingly.
 - **Dynamic Linking Loader**: Loads and links shared libraries at runtime.
 
+### Common Loaders
+
+#### PE (Portable Executable)
+The PE format is used in Windows operating systems. It includes headers and sections that describe the executable code, data, and resources. The loader reads the PE file, maps it into memory, resolves imports, and prepares the program for execution.
+
+#### ELF (Executable and Linkable Format)
+ELF is commonly used in Unix-like operating systems, including Linux. It supports multiple architectures and includes headers that describe how the file should be loaded into memory. The loader handles loading, dynamic linking, and relocation.
+
+See [C01-Elf format](/pages/C01/elf.md)
+
+#### Mach-O (Mach Object)
+Mach-O is used in macOS and iOS. It supports both 32-bit and 64-bit architectures. The Mach-O loader reads the file, maps segments into memory, resolves symbols, and handles dynamic linking.
+
+These loaders are essential for executing programs on their respective operating systems, each with unique features and capabilities tailored to their environments.
+
 -----------------------------
 
 # C02-01: Understanding a custom loader (Medium--)
