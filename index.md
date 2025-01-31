@@ -43,3 +43,4 @@ In this module, we dive deep into low-level reversing, dealing with binaries tha
 In this module, you will explore various obfuscation techniques used to make reverse engineering more challenging. You will learn about different methods of code obfuscation, how to identify them, and strategies to deobfuscate and analyze obfuscated code.
 
 [C03: Virtual Obfuscation](/pages/C03/vm.md)  
+[C03: Control Flow Flattening Obfuscation](/pages/C03/cff.md)

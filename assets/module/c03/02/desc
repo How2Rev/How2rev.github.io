@@ -1,0 +1,6 @@
+Packing & Unpacking is a must have technique for any reverser that enter the worlds of malware, software protection and security. 
+
+In this exercice, you will have a file which has been packed by a classical packing software.
+Unfortunately, the user can't unpack it with the software, the hacker has altered some of the data from the headers to prevent retreiving the original code...
+
+Flag format is LRCTF{WASD SEQUENCE}

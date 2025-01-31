@@ -2,6 +2,12 @@
 layout: default
 ---
 
+# Recommended Ressource:
+
+[EN][ Vm Based Deobfuscation](https://synthesis.to/2021/10/21/vm_based_obfuscation.html)
+
+# Virutal Machine obfuscation
+
 > Lesson from `https://www.hackcyom.com/2024/09/vm-obfuscation-overview/`
 
 An introduction to `VM-based obfuscation`, focusing on design philosophy and future research.
