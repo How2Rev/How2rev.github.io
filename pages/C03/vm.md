@@ -4,7 +4,7 @@ layout: default
 
 # Recommended Ressource:
 
-[EN][ Vm Based Deobfuscation](https://synthesis.to/2021/10/21/vm_based_obfuscation.html)
+[Post EN][ Vm Based Deobfuscation](https://synthesis.to/2021/10/21/vm_based_obfuscation.html)
 
 # Virutal Machine obfuscation
 

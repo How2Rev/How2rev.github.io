@@ -7,8 +7,8 @@ layout: default
 Diffing is an essential concept when working with binaries and frameworks. It allows you to quickly identify modifications between new binaries or recover symbols in stripped binaries.
 
 Here is a list of resources you can read to understand this concept:  
-- [EN] [Blackhat Talk: Issues with CVE patches & the easy introduction of 1-day exploits](https://www.blackhat.com/presentations/bh-usa-09/OH/BHUSA09-Oh-DiffingBinaries-SLIDES.pdf)
-- [FR] [En Bref #01 - Diffing & Symbols recuperation : https://www.youtube.com/watch?v=owDu_ULlzfk](https://www.youtube.com/watch?v=owDu_ULlzfk)
+- [Post EN] [Blackhat Talk: Issues with CVE patches & the easy introduction of 1-day exploits](https://www.blackhat.com/presentations/bh-usa-09/OH/BHUSA09-Oh-DiffingBinaries-SLIDES.pdf)
+- [Video FR] [En Bref #01 - Diffing & Symbols recuperation : https://www.youtube.com/watch?v=owDu_ULlzfk](https://www.youtube.com/watch?v=owDu_ULlzfk)
 
 # Binary Diffing
 

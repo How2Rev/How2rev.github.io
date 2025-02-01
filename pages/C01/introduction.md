@@ -6,10 +6,10 @@ layout: default
 
 As an introduction to reverse engineering, here is a list of good resources to help you understand basic concepts and get started:
 
-- [FR] [Lessons in Reversing (Beginner Level)](https://reverse.zip/categories/introduction-au-reverse/)
-- [EN] [C Language (Beginner Level)](https://www.w3schools.com/c/)
-- [FR] [C Language (Beginner Level)](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c)
-- [Godbolt: See how a language's code transforms to ASM](https://godbolt.org/)
+- [Post FR] [Lessons in Reversing (Beginner Level)](https://reverse.zip/categories/introduction-au-reverse/)
+- [Doc EN] [C Language (Beginner Level)](https://www.w3schools.com/c/)
+- [Post FR] [C Language (Beginner Level)](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c)
+- [Tool][ Godbolt: See how a language's code transforms to ASM](https://godbolt.org/)
 
 # Reverse-Engineering : Key concept
 

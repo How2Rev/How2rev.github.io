@@ -4,8 +4,8 @@ layout: default
 
 # Recommended Ressource:
 
-- [EN][ CFF Deobfuscation](https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening)
-- [EN][ D810 - CFF Deobfuscation plugins](https://eshard.com/posts/D810-a-journey-into-control-flow-unflattening)
+- [Post EN][ CFF Deobfuscation](https://github.com/obfuscator-llvm/obfuscator/wiki/Control-Flow-Flattening)
+- [Post EN][ D810 - CFF Deobfuscation plugins](https://eshard.com/posts/D810-a-journey-into-control-flow-unflattening)
 
 # Control Flow Flattening Obfuscation
 
