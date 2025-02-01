@@ -36,12 +36,8 @@ The contents of the `.apk` file always fit a specific structure:
     - Compatibility features (e.g., minimum Android version and supported devices).
     - A complete specification can be found [here](https://developer.android.com/guide/topics/manifest/manifest-intro).
 
-As part of the Fusion process, the binary representation of the `AndroidManifest.xml` usually changes as Appdome adjusts the file to support the selected settings.
-
-Incidentally, Appdome’s **TOTALCode**, and more specifically **Encrypt Strings and Resources** and **Non-Native Code Obfuscation** switches to seek out those files when obfuscating the application’s code and alters them as part of the fusion process.
-
 In addition, as part of the fusion process, some assets may be added to store information related to Fusion and the selected policy.
-- **classes.dex** – Google’s proprietary format for their version of the Java VM, contains all Java/Kotlin code compiled to their specific bytecode called Dalvik. APK files may contain more than one `classes.dex` file due to limitations of the DEX format. Additional files will be numbered (i.e., `classes2.dex`, `classes3.dex` and so forth). As part of the fusion process, Appdome adds at least one more `classes.dex` containing only the selected policy. The application’s original `classes.dex` is also altered as part of the fusion process. Appdome’s **Flow Relocation** will obfuscate the original application’s code flow within the dex files.
+- **classes.dex** – Google’s proprietary format for their version of the Java VM, contains all Java/Kotlin code compiled to their specific bytecode called Dalvik. APK files may contain more than one `classes.dex` file due to limitations of the DEX format. Additional files will be numbered (i.e., `classes2.dex`, `classes3.dex` and so forth).
 - **kotlin** – This folder is present only if the application was written with Kotlin. It contains Kotlin-specific data. Depending on the selected Fusion policy, its content might change as part of the fusion process.
 - **lib** – A folder that contains native libraries (machine code). Since Android is cross-platform, it contains a subfolder for each supported processor:
     - **armabi** – Binaries that support at least ARMv5TE, deprecated since ndkr16 (Dec. 2017) and removed in ndkr17 (Jun. 2018).
@@ -51,12 +47,11 @@ In addition, as part of the fusion process, some assets may be added to store in
     - **x86_64** – Binaries supporting x86-64.
     - **mips** – Binaries for MIPS, deprecated since ndkr17.
     - The presence or lack of a subfolder indicates the support (or lack thereof) for that platform. For example, if there’s an `x86_64` subfolder, the application will be compatible with the Android emulator.
-    - Appdome’s **Binary Code Obfuscation** will encrypt these files to protect them from reverse engineering.
 
 More info about supported ABI’s can be found [here](https://developer.android.com/ndk/guides/abis).
 
-- **res** – A folder that contains resources (like assets) but with a pre-defined folder hierarchy that the developer can’t change. These files are used to provide alternatives for different screen orientations, OS versions, and multi-language support. During the Fusion process, Appdome unpacks and repacks the resource folder, so its binary representation of the `.xml` files or nine-patch png files may change. Depending on the third-party SDKs and UI/Networking resources added to the application according to the customer-selected Fusion set, more files may be added to this folder, and the content of files may change as well.
-- **resources.arsc** – A file that contains information that links the code (`classes.dex`) to the resources (`res`). For example, the code might reference the text of a dialog, while the resources contain that text in all languages. The Android OS then chooses the correct language according to the device’s locale configuration. During the Fusion process, Appdome unpacks and repacks the resource folder, so its binary representation usually changes.
+- **res** – A folder that contains resources (like assets) but with a pre-defined folder hierarchy that the developer can’t change. These files are used to provide alternatives for different screen orientations, OS versions, and multi-language support.
+- **resources.arsc** – A file that contains information that links the code (`classes.dex`) to the resources (`res`). For example, the code might reference the text of a dialog, while the resources contain that text in all languages. The Android OS then chooses the correct language according to the device’s locale configuration. 
 
 # JNI : The principle of dynamic registration
 
