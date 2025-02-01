@@ -424,3 +424,12 @@ Your goal here is to write a solver that sends the correct message and patches t
 `flag md5sum: f3985e9117865f5696182b17b973e822`
 
 [C01-04: introduction4.bin](/assets/module/c01/04/introduction4.bin).
+
+# C01-09 : Introduction to Crypto (Medium--)
+
+Crypto is always important for reversing firmwares & binaries.
+In this first challenge of the series, you will need to identify the crypto algo behind this binary. 
+
+The flag format is LRCTF{PrintableAscii}.
+
+[C01-09: crypto01.bin](/assets/module/c01/09/crypto01.bin).
