@@ -98,7 +98,7 @@ flag format is LRCTF{ascii}
 [C04-02: android02.apk](/assets/module/c04/01/android02.apk)  
 
 
-# C04 - 03 : MobicrackNDK
+# C04 - 03 : MobicrackNDK (Easy++)
 
 > This challenge come from past CTF
 

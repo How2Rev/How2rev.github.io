@@ -44,7 +44,7 @@ In this module, you will explore various obfuscation techniques used to make rev
 
 [C03: Virtual Obfuscation](/pages/C03/vm.md)  
 [C03: Control Flow Flattening Obfuscation](/pages/C03/cff.md)   
-[C03: Mixed Boolean Arithmetic Obfuscation](/pages/CO3/mba.md)
+[C03: Mixed Boolean Arithmetic Obfuscation](/pages/C03/mba.md)
 
 # C04 - Mobile Time ! 
 
