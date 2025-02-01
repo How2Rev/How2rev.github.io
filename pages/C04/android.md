@@ -58,6 +58,32 @@ More info about supported ABI’s can be found [here](https://developer.android.
 - **res** – A folder that contains resources (like assets) but with a pre-defined folder hierarchy that the developer can’t change. These files are used to provide alternatives for different screen orientations, OS versions, and multi-language support. During the Fusion process, Appdome unpacks and repacks the resource folder, so its binary representation of the `.xml` files or nine-patch png files may change. Depending on the third-party SDKs and UI/Networking resources added to the application according to the customer-selected Fusion set, more files may be added to this folder, and the content of files may change as well.
 - **resources.arsc** – A file that contains information that links the code (`classes.dex`) to the resources (`res`). For example, the code might reference the text of a dialog, while the resources contain that text in all languages. The Android OS then chooses the correct language according to the device’s locale configuration. During the Fusion process, Appdome unpacks and repacks the resource folder, so its binary representation usually changes.
 
+# JNI : The principle of dynamic registration
+
+JNI allows us to provide a function mapping table and register it with the JVM, so that the JVM can use the function mapping table to call the corresponding function without having to look up the relevant function by function name.
+
+```c
+static jstring nativeDynamicRegFromJni(JNIEnv *env, jobject obj)
+{
+    return (*env) -> NewStringUTF(env, "dynamic call suceed");
+}
+
+JNINativeMethod nativeMethod[] = {{"dynamicRegFromJni", "()Ljava/lang/String;", (void*)nativeDynamicRegFromJni}};
+
+JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *jvm, void *reserved)
+{
+    JNIEnv *env;
+    
+    jclass clz = (*env) -> FindClass(env, "com/example/helloWorld/MainActivity");
+
+    (*env) -> RegisterNatives(env, clz, nativeMethod, sizeof(nativeMethod) / sizeof(nativeMethod[0]));
+
+    return 0;
+}
+```
+# JNI_OnLoad()
+
+When Java loads the JNI dynamic library via System.loadLibrary, it calls the JNI_OnLoad function.
 
 # C04 - 01 : Android Rev V01 (Easy--)
 
@@ -77,3 +103,12 @@ flag format is LRCTF{ascii}
 [C04-02: android02.apk](/assets/module/c04/01/android02.apk)  
 
 
+# C04 - 03 : MobicrackNDK
+
+> This challenge come from past CTF
+
+How does this calc work
+
+No flag format, password is Ascii
+
+[C04-03 : MobicrackNDK](/assets/module/c04/03/mobicrackNDK.apk)
