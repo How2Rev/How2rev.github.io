@@ -156,3 +156,5 @@ What will be your approach to this VM?
 Flag format is LRCTF{PrintableAscii}
 
 [C03-01: vm.bin](/assets/module/c03/01/babyvm.bin)  
+
+`flag md5sum : b4ddd582fe66ad02bbee44f71a28a341`

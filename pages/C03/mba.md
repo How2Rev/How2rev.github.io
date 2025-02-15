@@ -194,3 +194,5 @@ Can you deobfuscate them and retreive the original equation to find the flag?
 The flag format is LRCTF{PrintableAscii}.
 
 [C03-04: mba.bin](/assets/module/c03/04/mba.bin)  
+
+`flag md5sum : 266cf8f027d969cea5e88e5b2e658601`

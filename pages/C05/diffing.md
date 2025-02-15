@@ -55,15 +55,15 @@ With BinDiff you can identify and isolate fixes for vulnerabilities in vendor-su
 
 `Bindiff` comes with its own UI where we can diff files we want to compare:
 
-![bindiff_diff_gui](/pages/C01/img/diffing/bindiff_diff_gui.png)
+![bindiff_diff_gui](/pages/C05/img/diffing/bindiff_diff_gui.png)
 
 We can then pick and compare a function directly in their UI. This is also accessible from the context menu inside of IDA.
 
-![bindiff_diff](/pages/C01/img/diffing/bindiff_diff.png)
+![bindiff_diff](/pages/C05/img/diffing/bindiff_diff.png)
 
 As the results are presented we get a number of tabs which give you some statistics. The Primary Unmatched tab shows functions that exist in the currently opened IDB that were not found in the other file, while the Secondary Unmatched and Matched Functions tabs should be self-explanatory.
 
-![bindiff_ida_result](/pages/C01/img/diffing/bindiff_ida_result.png)
+![bindiff_ida_result](/pages/C05/img/diffing/bindiff_ida_result.png)
 
 As we can see, the Matched Function tab also provides us with a measurement on the similarities as well as the confidence of the match, the algorithm that was used and the names of the respective files. From the context menu we can now import symbols.
 
@@ -84,18 +84,18 @@ Diaphora is a plugin to IDA and it exports all necessary metadata into a sqlite-
 
 We first open a file in IDA and export all the necessary metadata into a sqlite-database before then opening the second file and comparing the sqlite files:
 
-![diaphora_export](/pages/C01/img/diffing/diaphora_export.png)
+![diaphora_export](/pages/C05/img/diffing/diaphora_export.png)
 
 The UI after the comparison finishes is pretty much the same as BinDiff.
 However when comparing functions side-by-side it’s all done in IDA with the option to get an assembly, a pseudo-code and a patch-style comparison.
 
-![pseudo_diff](/pages/C01/img/diffing/pseudo_diff.png)
+![pseudo_diff](/pages/C05/img/diffing/pseudo_diff.png)
 
 In summary, they are both potent tools and in the context of diffing Windows patches it won’t really matter which you choose. As we have seen, the technique of binary diffing is useful for visualizing the difference between two binaries and is useful for purposes including variant analysis, vulnerability research and patch validation.
 
 In the final part of this blog series, we will step through the process of diffing a Windows patch using the BinDiff tool.
 
-# C01-07: Finding the Vulnerable Function (Medium--)
+# C05-02: Finding the Vulnerable Function (Medium--)
 
 In this challenge, we have 2 binaries: 
 - `v8_AFHXc8001.bin`: The old kernel of an IT company that was recently 0day'd...
@@ -114,10 +114,10 @@ f1: The function that was patched. It should be a poorly secured buffer that res
 
 `flag md5sum: d2a8c400c6b13499fd6a95368ea6064f`
 
-[C01-07: v8_AFHXc8001.bin](/assets/module/c01/07/v8_AFHXc8001.bin)  
-[C01-07: v8_AFHXc8002.bin](/assets/module/c01/07/v8_AFHXc8002.bin)  
+[C05-07: v8_AFHXc8001.bin](/assets/module/C05/02/v8_AFHXc8001.bin)  
+[C05-07: v8_AFHXc8002.bin](/assets/module/C05/02/v8_AFHXc8002.bin)  
 
-# C01-08: Recovering Symbols of a Stripped Static Simple C Program (Easy)
+# C05-03: Recovering Symbols of a Stripped Static Simple C Program (Easy)
 
 In this challenge, we have 2 binaries:
 - `my_first_c_program`: A simple C program that performs some basic libc calls and then exits.
@@ -146,5 +146,6 @@ int main() {
 
 => flag = LRCTF{fopen:fread:fclose}
 
-[C01-08: my_first_c_program](/assets/module/c01/08/my_first_c_program)  
-[C01-08: libc.so.6](/assets/module/c01/08/libc.so.6)  
+[C05-08: my_first_c_program](/assets/module/C05/03/my_first_c_program)  
+[C05-08: libc.so.6](/assets/module/C05/03/libc.so.6)  
+

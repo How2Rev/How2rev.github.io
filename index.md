@@ -19,7 +19,7 @@ This website does not check if you follow the correct path. My purpose is to pro
 
 Each flag will be saved as LRCTF{} (or as otherwise mentioned).
 You can check if you have the correct flag with the provided md5sum for each challenge:  
-`echo -n "LRCTF{theFlag}" | md5sum`
+`echo -n "LRCTF{theFlag}" | md5sum` (Only self-created challenge)
 
 Many challenges come from past CTF events or are self-made. I recommend not searching for write-ups until you have made a solid attempt at a challenge—it’s much better to learn by trying hard to solve a difficult challenge.
 
@@ -27,27 +27,33 @@ Many challenges come from past CTF events or are self-made. I recommend not sear
 
 In this module, you will learn the basics of reverse engineering:
  
-[C01: Decompilation & Basic Reversing](/pages/C01/introduction.md).  
-[C01: The ELF Format](/pages/C01/elf.md).  
-[C01: Function Diffing & Symbol Reconstruction](/pages/C01/diffing.md)
+[C01 - Decompilation & Basic Reversing](/pages/C01/introduction.md).  
+[C01 - The ELF Format](/pages/C01/elf.md).  
 
 # C02 - Low level reversing
 
 In this module, we dive deep into low-level reversing, dealing with binaries that are difficult to emulate or debug. Here we will work with bootloaders, firmware, shellcode, etc.
 
-[C02: Emulation & Custom Loaders](/pages/C02/loaders-and-emulation.md)  
-[C02: CPU Introduction](/pages/C02/cpu.md)  
+[C02 - Emulation & Custom Loaders](/pages/C02/loaders-and-emulation.md)  
+[C02 - CPU Introduction](/pages/C02/cpu.md)  
 
 # C03 - Obfuscation world
 
 In this module, you will explore various obfuscation techniques used to make reverse engineering more challenging. You will learn about different methods of code obfuscation, how to identify them, and strategies to deobfuscate and analyze obfuscated code.
 
-[C03: Virtual Obfuscation](/pages/C03/vm.md)  
-[C03: Control Flow Flattening Obfuscation](/pages/C03/cff.md)   
-[C03: Mixed Boolean Arithmetic Obfuscation](/pages/C03/mba.md)
+[C03 - Virtual Obfuscation](/pages/C03/vm.md)  
+[C03 - Control Flow Flattening Obfuscation](/pages/C03/cff.md)   
+[C03 - Mixed Boolean Arithmetic Obfuscation](/pages/C03/mba.md)
 
 # C04 - Mobile Time ! 
 
 In this module, we are exploring Mobile reversing ! From APK pentesting to Objective C IOS headache :)
 
 [CO4 - Android Apps](/pages/C04/android.md)
+
+# C05 - Advanced Reverse Concept
+
+Now that your familiar with basic reverse concepts, let's explore more advanced things!
+
+[C05 - EBPF](/pages/C05/ebpf.md)  
+[C05 - Function Diffing & Symbol Reconstruction](/pages/C05/diffing.md)

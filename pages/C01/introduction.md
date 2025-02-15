@@ -433,3 +433,5 @@ In this first challenge of the series, you will need to identify the crypto algo
 The flag format is LRCTF{PrintableAscii}.
 
 [C01-09: crypto01.bin](/assets/module/c01/09/crypto01.bin).
+
+`flag md5sum: 9068e3550ef28714f79564c670db4cf8`

@@ -131,6 +131,8 @@ Flag format is LRCTF{WASD SEQUENCE}
 
 [C03-02: cff01.bin](/assets/module/c03/02/cff01.bin)  
 
+`flag md5sum : e966c44afdbe380b654081f05ee86d14`
+
 # C03 - 03 : Dynamic CFF flattening
 
 Now dispatcher is dynamically computed. More fun, more tryhard. 

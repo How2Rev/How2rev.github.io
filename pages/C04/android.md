@@ -88,6 +88,8 @@ flag format is LRCTF{ascii}
 
 [C04-01: android01.apk](/assets/module/c04/01/android01.apk)  
 
+`flag md5sum : f4ee1d60976b10a656727a97c6d2be0b`
+
 # C04 - 02 : Android Rev V02 (Easy+)
 
 We fired the old developer who stored a password in the source code like this. 
@@ -97,6 +99,7 @@ flag format is LRCTF{ascii}
 
 [C04-02: android02.apk](/assets/module/c04/01/android02.apk)  
 
+`flag md5sum : f4320c7baf988de61c6fe67dbe1b9aec`
 
 # C04 - 03 : MobicrackNDK (Easy++)
 
